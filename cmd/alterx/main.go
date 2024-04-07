@@ -59,7 +59,7 @@ func main() {
 	if cliOpts.Estimate {
 		estimateCount := m.EstimateCount()
 		gologger.Info().Msgf("Estimated Payloads (including duplicates) : %v", estimateCount)
-		fmt.Printf("%v\n", estimateCount)
+		fmt.Printf("%v", estimateCount)
 		return
 	}
 
