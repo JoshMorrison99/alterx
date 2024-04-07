@@ -1,4 +1,4 @@
-module github.com/JoshMorrison99/alterx
+module github.com/projectdiscovery/alterx
 
 go 1.21
 
