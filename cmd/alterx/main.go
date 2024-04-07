@@ -3,6 +3,7 @@ package main
 import (
 	"io"
 	"os"
+	"fmt"
 
 	"github.com/projectdiscovery/alterx"
 	"github.com/projectdiscovery/alterx/internal/runner"
@@ -56,7 +57,9 @@ func main() {
 	}
 
 	if cliOpts.Estimate {
-		gologger.Info().Msgf("Estimated Payloads (including duplicates) : %v", m.EstimateCount())
+		estimateCount := m.EstimateCount()
+		gologger.Info().Msgf("Estimated Payloads (including duplicates) : %v", estimateCount)
+		fmt.Printf("%v\n", estimateCount)
 		return
 	}
 
